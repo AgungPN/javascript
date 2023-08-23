@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector DOM</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f3f3;
+    }
+
+    div {
+      background: #fff;
+      margin: 50px;
+      padding: 20px;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .3);
+      display: grid;
+      place-content: center;
+      border-radius: .3em;
+    }
+
+    #header {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    td,
+    th {
+      padding: 7px;
+    }
+
+    span {
+      text-align: center;
+      display: block;
+      color: brown;
+      font-weight: 500;
+    }
+
+    .istilah-dasar ul {
+      position: relative;
+    }
+
+    .istilah-dasar {
+      padding-bottom: 100px;
+    }
+
+    .istilah-dasar ul li:last-child {
+      font-size: 20px;
+      position: absolute;
+      list-style: none;
+    }
+
+    .input {
+      display: block;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .3);
+      border: none;
+      width: 100%;
+      height: 20px;
+      margin-top: 15px;
+      border-radius: .3em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="header">JavaScript</h1>
+  <div class="istilah-dasar">
+    <ul>
+      <a href="https://overapi.com/javascript">OverAPI</a>
+      <input type="text" name="text" placeholder="coba Selector DOM">
+      <li>
+        <h2>Element</h2>
+        <p>Merupakan tag HTML seperti (h1-h6,p,div,dll)</p>
+      </li>
+      <li>
+        <h2>Attribut</h2>
+        <p>Bagian dari element seperti (href,style,class,id,dll)</p>
+      </li>
+      <li>
+        <h2>Text</h2>
+        <p>Nilai dari element html</p>
+      </li>
+      <li>
+        <h2>Node</h2>
+        <p>1 Bagian dari HTML baik itu 1 element/ 1 value, intinya hanya 1</p>
+      </li>
+      <li>
+        <h2>NodeList</h2>
+        <p>Kumpulan bagian dari HTML bebas element/ value, jumlahnya > 1</p>
+      </li>
+      <li>
+        <h2>HTMLCollection</h2>
+        <p>Kumpulan element HTML (hanya element/tag HTML saja)</p>
+      </li>
+      <li> <code>HTMLCollection and NodeList memiliki perbedaan cara pengaplikasian</code></li>
+    </ul>
+  </div>
+
+  <div class="struktur-dom">
+    <ol>
+      <li>
+        <h2>Root</h2>
+        <p>Node yang menjadi sumber dari semua node <b>(document)</b></p>
+      </li>
+      <li>
+        <h2>Parent Node</h2>
+        <p>Node yang 1 tingkat diatas node lain, seperti body merupakan parent dari div</p>
+      </li>
+      <li>
+        <h2>Clild Node</h2>
+        <p>Node yang menjadi 1 tingkat dari node lain, seperti div merupakan child dari body</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="selection-method">
+    <table border="1" cellspacing="0">
+      <tr>
+        <th>Method</th>
+        <th>Penjelasan</th>
+        <th>Hasil</th>
+      </tr>
+      <tr>
+        <td><i>getElementById()</i></td>
+        <td>mengambil data berdasarkan id</td>
+        <td><span>element</span></td>
+      </tr>
+      <tr>
+        <td><i>getElementsByTagName()</i></td>
+        <td>mengambil data berdasarkan nama tag <strong>(seperti array)</strong></td>
+        <td><span>HTMLCollection</span></td>
+      </tr>
+      <tr>
+        <td><i>getElemetnsByClassName()</i></td>
+        <td>mengambil data berdasarkan nama class <strong>(seperti array)</strong></td>
+        <td><span>HTMLCollection</span></td>
+      </tr>
+      <tr>
+        <td><i>getElemetnsByName()</i></td>
+        <td>mengambil data berdasarkan attribute name <strong>biasasnya pada input form</strong></td>
+        <td><span>nodeList</span></td>
+      </tr>
+      <tr>
+        <td><i>querySelector()</i></td>
+        <td>mengambil data seperti selector pada css <strong>(# untuk id, . untuk class)</strong></td>
+        <td><span>element</span></td>
+      </tr>
+      <tr>
+        <td><i>querySelectorAll()</i></td>
+        <td>sama seperti diatasnya, tapi mengambil semua data</td>
+        <td><span>nodeList</span></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <!-- script ditaruh dibawah karena agar tag HTML direload dulu semua, karena HTML dibaca dari atas ke bawah -->
+  <script src="script.js"></script>
+</body>
+
+</html>

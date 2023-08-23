@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulasi</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f3f3;
+    }
+
+    .element>ul>li,
+    .node .list>li {
+      background: white;
+      padding: 10px;
+      margin: 15px;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .3);
+      border-radius: .3em;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .text-red {
+      color: red;
+    }
+
+    .text-brown {
+      color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="center">Manipulasi</h1>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Document Manipulasi Element</a>
+  <h2 class="inner">INI AKAN DIRUBAH</h2>
+  <div class="element">
+    <ul>
+      <li>
+        <h3>innerHTML</h3>
+        <p>
+          innerHTML bisa digunakan untuk merubah data didalam suatu element, bisa berupa script program/teks. Jika hanya
+          untuk teks lebih disarankan menggunakan <em>textContent</em> agar script program diconvert menjadi string
+        </p>
+        <p>contohnya: <code>paragraf.textContent = "ini text"</code></p>
+      </li>
+      <li>
+        <h3>style</h3>
+        <p>untuk menambahkan inline css, untuk program css lebih dari 1 kata, gunakan <em>camelCase</em></p>
+        <p>contohnya: <code>paragraf.style.backgroundColor = "red"</code></p>
+      </li>
+      <li>
+        <h3>setAttribut</h3>
+        <p>untuk memanipulasi attribut pada HTML, sebenarnya ada banyak manipulasi atribut seperti: </p>
+        <ol>
+          <li>
+            <h4><code>setAttribute("id","manipulasi")</code></h4>
+            <p>untuk menset attribut, seperti membuat attribut baru/ merubah isi suatu atribut. Contohnya
+              membuat/merubah attribut id menjadi "manipulasi"</p>
+          </li>
+          <li>
+            <h4><code>getAttribute("id")</code></h4>
+            <p>untuk melihat isi suatu attribute, contohnya melihat isi attribute id, <em>return null</em> jika tidak
+              ada</p>
+          </li>
+          <li>
+            <h4><code>removeattribute("id")</code></h4>
+            <p>untuk menghapus suatu attribute, contohnya menghapus attribute id</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h3>classList</h3>
+        <p> cara khusus untuk memanipulasi class </p>
+        <ol>
+          <li>
+            <h4><code>x.classList.add("newClass")</code></h4>
+            <p>untuk menambahkan class baru</p>
+          </li>
+          <li>
+            <h4><code>x.classList.remove("class")</code></h4>
+            <p>untuk menghapus class jika ditemukkan</p>
+          </li>
+          <li>
+            <h4><code>x.classList.toggle("class")</code></h4>
+            <p>jika class ditemukkan, maka hapus. Tapi jika tidak maka tambahkan, <em>return true || false</em></p>
+          </li>
+          <li>
+            <h4><code>x.classList.item(0)</code></h4>
+            <p>untuk mengecek nama item class pada posisi tertentu, <em>return namaClass || null</em></p>
+          </li>
+          <li>
+            <h4><code>x.classList.contains("class")</code></h4>
+            <p>untuk mengecek apakah ditemukkan class, <em>return true || false</em></p>
+          </li>
+          <li>
+            <h4><code>x.classList.replace("class","newClass")</code></h4>
+            <p>untuk merubah suatu class menjadi class lain <em>return true || false</em></p>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+
+  <div class="node">
+    <h1 class="center">Manipulasi Node</h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Document Manipulasi Node</a>
+    <ol class="list">
+      <a href="">HELLO WORLD</a>
+      <li>
+        <h4>document.createElement('h4')</h4>
+      </li>
+      <li>
+        <h4>document.createTextNode('ini text')</h4>
+      </li>
+      <li>
+        <h4>node.insertBefore(newList,AfterList)</h4>
+      </li>
+      <li>
+        <h4>parentNode.removeChild(element)</h4>
+      </li>
+    </ol>
+  </div>
+
+  <script src="manipulasiElement.js"></script>
+  <script src="manipulasiNode.js"></script>
+</body>
+
+</html>

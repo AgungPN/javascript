@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+    function validasi(){
+        var namaValid    = /^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$/;
+        var emailValid   = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        var nama         = formulir.nama.value;
+        var jeniskelamin = formulir.jenis_kelamin.value;
+        var email        = formulir.email.value;
+        var pesan = '';
+         
+        if (nama == '') {
+            pesan = '-Nama tidak boleh kosong\n';
+        }
+         
+        if (nama != '' && !nama.match(namaValid)) {
+            pesan += '-nama tidak valid\n';
+        }
+         
+        if (jeniskelamin == '') {
+            pesan += '-jenis kelamin harus dipilih\n';
+        }
+         
+        if (email == '') {
+            pesan += '-email tidak boleh kosong\n';
+        }
+         
+        if (email !=''  && !email.match(emailValid)) {
+            pesan += '-<span id="dd5k4w_15" class="dd5k4w">alamat</span> email tidak valid\n';
+        }
+         
+        if (pesan != '') {
+            alert('Maaf, ada kesalahan pengisian Formulir : \n'+pesan);
+            return false;
+        }
+    return true
+    }
+</script>
+ 
+<fieldset style="margin:auto; width:40%;">
+<legend>Formulir Biodata</legend>
+<form name="formulir" action="simpan_data.php" method="post"  onSubmit="return validasi()">
+    <p>
+        Nama Lengkap :
+ 
+        <input type="text" name="nama" placeholder="nama lengkap Anda" />
+    </p>
+     
+    <p>
+        Jenis Kelamin :
+ 
+        <select name="jenis_kelamin">
+            <option value="">-Pilih-</option>
+            <option value="laki-laki">Laki-Laki</option>
+            <option value="perempuan">Perempuan</option>
+        </select>
+    </p>
+     
+    <p>
+        Email Anda :
+ 
+        <input type="text" name="email" placeholder="email Anda" />
+    </p>
+     
+    <p>
+        <input type="submit" value="Simpan Data" name="submit" />
+        <input type="reset" value="Reset Form" name="reset" />
+    </p>
+</form>
+ 
+</fieldset>
+</body>
+</html>

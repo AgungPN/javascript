@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script>
+  function hitung(a,b)
+  { 
+    var c = a*b;
+	document.forms["a"].total.value=c;
+  }
+</script>
+
+</head>
+
+<body>
+<form name="a">
+<table>
+  <tr> 
+     <td>Nama Barang </td>
+     <td><input type="text" name="barang" /> </td>
+  </tr>
+  <tr> 
+     <td>Harga Satuan </td>
+     <td><input type="text" name="harga" /> </td>
+  </tr>
+  <tr> 
+     <td>Jumlah </td>
+     <td><input type="text" name="jumlah"  onkeypress="hitung(harga.value,jumlah.value)"/> </td>
+  </tr>
+  <tr> 
+     <td>Harga Total </td>
+     <td><input type="text" name="total" /> </td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery.js"></script>
+    <title>Animasi effect</title>
+</head>
+<body>
+    <button id="kiri">&laquo;</button>
+    <button id="kanan">&raquo;</button>
+    <div class="animate" style="width: 100px;height: 100px; margin: auto;background-color: orangered; position: absolute;"></div>
+    <button id="start" style="margin-top: 150px; position: absolute;">Start</button>
+    <button id="stop" style="margin-top: 150px; margin-left: -55px; position: absolute;">Stop</button>
+    <div class="box" style="width: 100px;height: 100px;background-color: blue; position: absolute; margin: auto;"></div>
+    <script>
+        $(document).ready(function () {
+            // animate
+            $('#kiri').click(function(){
+                $(".animate").animate({'left':"-=50px"},"slow");
+            })
+            $('#kanan').click(function(){
+                $('.animate').animate({'right':"-=50px"},"slow");
+            })
+            // clearQuene
+            $('#start').click(function () { 
+                $(".box").animate({"left":"+=600"},6000);
+                $(".box").queue(function () {  });
+             })
+            $("#stop").click(function () {
+                $(".box").clearQueue();
+                $('.box').stop();
+              })
+        });
+    </script>
+</body>
+</html>

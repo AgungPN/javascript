@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+ font-family: sans-serif;
+}
+ 
+h1{
+ text-align: center;
+}
+ 
+.box{
+	height: 300px;
+	width:300px;
+	background: orange;
+}
+ 
+#tombol{
+       padding:10px;
+       color: #fff;
+       background: #34495E;
+       border: none;
+}
+
+.bos{
+	height: 300px;
+	width:300px;
+	background: orange;
+	display: none;
+}
+ 
+#btn,
+#btn2{
+	padding:10px;
+	color: #fff;
+	background: #34495E;
+	border: none;
+}
+    </style>
+    <title>Selector</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <h1>EVENT JQUERY </h1>
+    <button id="button">Button</button>
+    <div class="box"></div>
+
+    <button id="btn">hide</button>
+    <button id="btn2">show</button>
+    <div class="bos"></div>
+    <script>
+        $(document).ready(function () {  
+            $('#button').mouseenter(function () {
+                $('.box').hide();
+              })
+            $('#button').mouseleave(function () {
+                $('.box').fadeIn();
+              })
+
+            $('#btn').click(function () { 
+                $('.bos').hide();
+            });
+            $('#btn2').click(function(){
+                $('.bos').show();
+            })
+        })
+    </script>
+</body>
+</html>

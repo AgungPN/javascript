@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+.lingkaran{
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	background: orange;
+	padding: 30px;
+	color: #fff;
+	margin-top:  20px;
+}
+ 
+.biru{
+	border-radius: 50%;
+	background: blue;
+}
+ 
+.tombol{
+	color: #fff;
+	background: #232323;
+	border: none;
+	padding: 10px;
+}
+    </style>
+    <title>manipulasi Class</title>
+</head>
+<body>
+    <h1>Manipulasi Class</h1>
+    <button class="tombol" id="tambah">Add</button>
+    <button class="tombol" id="hapus">Hapus</button>
+    <div class="lingkaran"></div>
+    <p class="pesan"></p>
+
+    <script src="../../jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#tambah').click(function(){
+                $('.lingkaran').addClass('biru');
+                $('.pesan').text("Tambah Class");
+            })
+            $('#hapus').click(function(){
+                $('.lingkaran').removeClass('biru');
+                $('.pesan').text("Hapus Class");
+            })
+        })
+    </script>
+</body>
+</html>

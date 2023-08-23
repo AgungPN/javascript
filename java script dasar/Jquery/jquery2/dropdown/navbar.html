@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a>
+            <ul>
+                <li><a href="">about1</a></li>
+                <li><a href="">about2</a></li>
+                <li><a href="">about3</a></li>
+            </ul>
+            </li>
+            <li><a href="">Bantuan</a></li>
+            <li><a href="">Login</a>
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="">Registrasi</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <script >
+        $(document).ready(function () {
+            $('#navbar li').hover(function(){
+                $(this).find("ul").slideToggle("slow");
+            })
+        });
+    </script>
+</body>
+</html>

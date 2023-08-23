@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial belajar JQuery </title>	
+	<script type="text/javascript" src="../../jquery.js"></script>
+<style>
+    body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+.lingkaran{
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	background: orange;
+	padding: 30px;
+	color: #fff;
+	margin-top:  20px;
+}
+ 
+.tombol{
+	color: #fff;
+	background: #232323;
+	border: none;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<h1>CSS Function JQuery </h1>	
+ 
+	<button class="tombol" id="tambah">Tambahkan CSS</button>
+	<div class="lingkaran"></div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+		$('#tambah').click(function(){
+			$('.lingkaran').css({"background":"blue","width":"400px","height":"400px"});
+		});	
+	});
+</script>
+</html>

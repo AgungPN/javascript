@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+  function cek()
+  {
+     if(document.forms["form1"].nama.value=="")
+	 {
+	    alert("nama masih kosong, isi donk!");
+	 }
+	 
+	 	
+  }
+</script>
+</head>
+<style>
+  form{
+    color: #4391d5;
+  }
+</style>
+
+<body>
+<form name="form1">
+  <table width="200" border="0">
+    <tr>
+      <td width="79">Nama</td>
+      <td width="111"><input type="text" name="nama" /></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" name="email" /></td>
+    </tr>
+    <tr>
+      <td>Komentar</td>
+      <td><textarea name="komentar"> </textarea></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="button" name="oke" value="Kirim" onclick="cek()" /></td>
+    </tr>
+  </table>
+
+</form>
+
+</body>
+</html>

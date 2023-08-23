@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial belajar JQuery </title>	
+	<script type="text/javascript" src="../../jquery.js"></script>
+
+    <style>
+        body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+#tombol{
+	padding:10px;
+	color: #fff;
+	background: #34495E;
+	border: none;
+}
+    </style>
+</head>
+<body>
+	<h1>Set Function JQuery</h1>		
+	<button id="tombol">KLIK</button>	
+	<p class="nama"></p>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('#tombol').click(function () { 
+            $('.nama').text('Agung Prasetyo Nugroho');
+         })
+	});
+</script>
+</html>

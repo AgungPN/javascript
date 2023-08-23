@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+  function hitung(jml,hrg)
+  {
+      var hargatotal = jml*hrg;
+	  document.forms["barang"].total.value=hargatotal;
+  }
+  
+  function pilih(brg)
+  {
+    if(brg=="bengbeng")
+	{
+	    document.forms["barang"].harga.value=1000;
+	}
+	else if(brg=="Top10")
+	{ 
+	  document.forms["barang"].harga.value=3000;
+	}
+	else if(brg=="Qtela")
+	{
+	  document.forms["barang"].harga.value=5000;
+	}
+	else if(brg=="chocolatos")
+	{
+		document.forms["barang"].harga.value=500;
+	}
+	else
+	{
+		document.forms["barang"].harga.value=0;
+	}
+	
+	
+  }
+</script>
+</head>
+
+<body>
+<form name="barang">
+<table width="200" border="1">
+  <tr>
+    <td>Nama Barang</td>
+    <td><select name="namabarang" onchange="pilih(namabarang.value)">
+          <option value="bengbeng">bengbeng</option>
+          <option value="Top10">Top 10 </option>
+          <option value="Qtela">Qtela</option>
+          <option value="chocolatos">Chocolatos</option>
+        </select>
+    
+         </td>
+  </tr>
+  <tr>
+    <td>Harga Satuan</td>
+    <td><input type="text" name="harga"/></td>
+  </tr>
+  <tr>
+    <td>Jumlah</td>
+    <td><input type="text" name="jumlah" onkeypress="hitung(jumlah.value,harga.value)" /></td>
+  </tr>
+  <tr>
+    <td>Harga Total</td>
+    <td><input type="text" name="total" /></td>
+  </tr>
+ 
+</table>
+
+</form>
+</body>
+</html>

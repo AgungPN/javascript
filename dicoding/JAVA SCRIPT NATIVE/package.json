@@ -1,0 +1,13 @@
+{
+  "name": "java-script-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "export & import/export.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node export & import/export.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

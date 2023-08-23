@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+  function jalankan(b,terserah,j)
+  {
+    alert("isi dari b = " + b);
+	alert("isi dari terserah = " + terserah);
+	alert("isi dari j = " + j);
+  }
+  function muncul(namaku)
+  {
+     alert("nama ku adalah " + namaku);
+  
+  }
+</script>
+</head>
+<body>
+  <form>
+    <input type="button" value="klik" onclick="jalankan(10,4,6)" /> <br />
+    ketik nama : <input type="text" name="nama" />
+    <input type="button" value="tampil" onclick="muncul(nama.value)"/>     
+  </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add css</title>
+    <style>
+        body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+.lingkaran{
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	background: orange;
+	padding: 30px;
+	color: #fff;
+	margin-top:  20px;
+}
+ 
+.tombol{
+	color: #fff;
+	background: #232323;
+	border: none;
+	padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <h1>ADD CSS</h1>
+    <button class="tombol" id="tambah">Tambah CSS</button>
+    <div class="lingkaran"></div>
+    <script src="../../jquery.js"></script>
+    <script >
+        $(document).ready(function () {
+            $('#tambah').click(function () { 
+                $('.lingkaran').css("background","red");
+            });
+        });
+    </script>
+</body>
+</html>

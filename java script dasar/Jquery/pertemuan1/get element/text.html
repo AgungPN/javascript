@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial belajar JQuery Part 7 : Mendapatkan nilai dan value dengan JQuery</title>	
+	<script type="text/javascript" src="../../jquery.js"></script>
+
+    <style>
+        body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+#tombol{
+	padding:10px;
+	color: #fff;
+	background: #34495E;
+	border: none;
+}	
+    </style>
+</head>
+<body>
+	<h1>Get Function JQuery </h1>	
+	<button id="tombol">KLIK</button>
+	<p class="kata">welcome to my website</p>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tombol').click(function(){
+			var teks = $(".kata").text();
+			alert(teks);
+		});		
+	});
+</script>
+</html>

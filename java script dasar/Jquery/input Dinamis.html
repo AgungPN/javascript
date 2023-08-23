@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var i =2;
+            $("#tambah").click(function () { 
+                if(i>5){
+                    alert("Max 3");
+                    return false;
+                }
+                var div = $(document.createElement('div')).attr("id", 'div' + i);
+                div.after().html('<label>'+i+' : </label>'+'<input type="text"'+i+' id="'+i+'">');
+                div.appendTo('#group');
+                i++;
+            });
+            $('#hapus').click(function () { 
+                if(i==2){
+                    alert('input tidak bisa dihapus lagi');
+                    return false;
+                }
+                i--;
+                $('#div'+i).remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="group">
+        <div id="div1">
+            <label for="">1 : </label>
+            <input type="text" name="" id="input1">
+        </div>
+    </div>
+    <p><a id="tambah">Tambah</a>||<a id="hapus">Hapus</a></p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial belajar JQuery y</title>	
+	<script type="text/javascript" src="../../jquery.js"></script>
+
+    <style>
+        body{
+	font-family: sans-serif;
+}
+ 
+h1{
+	text-align: center;
+}
+ 
+.nama{
+	padding: 9px;
+	font-size: 12pt;
+}
+ 
+#tombol{
+	padding:10px;
+	color: #fff;
+	background: #34495E;
+	border: none;
+}
+    </style>
+</head>
+<body>
+	<h1>Get Function JQuerym</h1>	
+	<input type="text" name="nama" class="nama">
+	<button id="tombol">KLIK</button>	
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#tombol').click(function () {
+            var nama = $('.nama').val();
+            alert(nama);
+          })
+    })
+</script>
+</html>

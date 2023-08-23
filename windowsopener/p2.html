@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+ function tampil(c,d)
+ {
+ 	alert(" c = "+c+" isi dari parameter d = "+d);
+ }
+ 
+ function show(nama,kelas)
+ {
+ 	alert("namaku adalah "+nama+", kelas "+kelas);
+ }
+ 
+</script>
+</head>
+
+<body>
+<form>
+  <input type="button" value="klik aku" onclick="tampil(10,30)" /> <br />
+  Nama : <input type="text" name="namaku" />
+  kelas : <input type="text" name="kelasku" />
+  <input type="button" value="tampil" onclick="show(namaku.value,kelasku.value)" />
+</form>
+</body>
+</html>

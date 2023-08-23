@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+	function tambah(a,b)
+	{
+	    a = parseInt(a);
+		b = parseInt(b);
+		var c=a+b;
+		alert("hasil dari "+a+"+"+b+"="+c);
+	}
+</script>
+
+</head>
+
+<body>
+<form>
+	bil1 = <input type="text" name="bil1" size="5" /> <br />
+    bil2 = <input type="text" name="bil2" size="5" /> <br />
+    <input type="button" value="cek" onclick="tambah(bil1.value,bil2.value)" />
+</form>
+
+</body>
+</html>

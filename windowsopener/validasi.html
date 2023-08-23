@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+   function cek(nama,email,telpon,komentar)
+   {
+      
+      /*ini untuk mengecek isi dari texbox nama */
+	
+	  
+	  var i;
+	  for(i=0; i<nama.length; i++)
+	  {
+	     if((nama.charAt(i)=="0") || (nama.charAt(i)=="1") || (nama.charAt(i)=="2") || (nama.charAt(i)=="3") || (nama.charAt(i)=="4") || (nama.charAt(i)=="5") || (nama.charAt(i)=="6") || (nama.charAt(i)=="7") || (nama.charAt(i)=="8") || (nama.charAt(i)=="9"))
+		 {
+		   alert("salah inputkan nama");
+		 }
+	  }
+	  
+	 
+	  
+	  // ini untuk validasi email
+	  
+	 if (email.indexOf("@")==-1 && email.indexOf(".")==-1) 
+     {
+	 	alert("salah email");
+	 }
+	 
+	 if(email=="")
+	 {
+	  	alert("email masih kosong");
+	 }
+	
+	
+	if(nama=="")
+	{
+	
+	   alert("email masih kosong");
+	} 	  
+	  // ini untuk validasi no tlp
+      if (!/^[0-9]+$/.test(telpon.value)) {
+	  alert("salah inputkan no.telp");
+      
+      } 
+	  //ini untuk cek panjang komentar
+	  
+	  if(komentar.length>=5)
+	  {
+	     alert("komentar terlalu panjang");
+	   
+	  }
+	  
+   }
+</script>
+</head>
+
+<body>
+<form name="form1">
+  <table>
+     <tr> 
+        <td>Nama </td>
+        <td> <input type="text" name="nama" /></td>
+     </tr>
+     <tr> 
+        <td>Email </td>
+        <td> <input type="text" name="email" /></td>
+     </tr>
+     <tr> 
+        <td>No Telp </td>
+        <td> <input type="text" name="telpon" /></td>
+     </tr>
+     <tr> 
+        <td>Komentar </td>
+        <td><textarea name="komentar"> </textarea></td>
+     </tr>
+     <tr> 
+        <td></td>
+        <td> <input type="button" value="kirim"  onclick="cek(nama.value,email.value,telpon.value, komentar.value)"/></td>
+     </tr>
+  </table>
+</form>
+</body>
+</html>

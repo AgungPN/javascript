@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+<title>Tabel Menu</title>
+</head>
+
+<body background="kayu.jpg">
+<font face=algerian size=6 color=red><center>
+<b>.::: CITA RASA KOREA DI SEOUL CHICKEN RESTO :::.</b><br></cente>
+<font face=arial size=4 color=blue>JL Majapahit No.87 Semarang</font>
+<font face=aharoni  size=4 color=black><b>
+	<center><hr color=blue width="1250">
+| <a href="index7.html">Beranda</a>
+| <a href="Tentang_restoran.html">Tentang Seoul Chicken</a>
+| <a href="about_me.html">Tentang Saya</a> 
+| <a href="kontak.html">Kontak Kami</a>
+| <a href="tabel_makanan.html">Daftar Harga</a>  
+| <a href="Form Pembayaran.html">Form Harga</a> |
+
+<hr color=blue width="1250"><p><font face=verdana size=8 color=black></b></center>
+
+<script language="JavaScript" type="text/javascript">
+function hitung() {
+var myForm = document.form1;
+var cheesebuldak = 60000 * eval(myForm.pesan1.value);
+var cheesetteokpokki = 70000 * eval(myForm.pesan2.value);
+var chocohoneybutterbread = 45000 * eval(myForm.pesan3.value);
+var lemontea = 25000 * eval(myForm.pesan4.value);
+var yangnyeom = 40000 * eval(myForm.pesan5.value);
+var sundubujjigae = 35000 * eval(myForm.pesan6.value);
+var jjajangmyun = 25000 * eval(myForm.pesan7.value);
+var tteokpokki = 25000 * eval(myForm.pesan8.value);
+var hasil = cheesebuldak+cheesetteokpokki+chocohoneybutterbread+lemontea+yangnyeom+sundubujjigae+jjajangmyun+tteokpokki;
+if (hasil > 50000) {
+    myForm.total.value = hasil;
+    myForm.diskon.value = 10000;
+    myForm.bayar.value = hasil - eval(myForm.diskon.value);
+ } else {
+    myForm.total.value = hasil;
+    myForm.diskon.value = 0;
+    myForm.bayar.value = hasil - eval(myForm.diskon.value);
+ }
+    myForm.hb1.value = cheesebuldak;
+    myForm.hb2.value = cheesetteokpokki;
+    myForm.hb3.value = chocohoneybutterbread;
+    myForm.hb4.value = lemontea;
+    myForm.hb5.value = yangnyeom;
+	myForm.hb6.value = sundubujjigae;
+	myForm.hb7.value = jjajangmyun;
+	myForm.hb8.value = tteokpokki;
+}
+
+
+</script>
+<center>
+<form name="form1" action="#">
+<font size="6" face="comic sans ms">Form Pembayaran</font>
+<table border="2" cellspacing=0 cellpadding=5 summary="Tabel Menu" bgcolor="pink">
+
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<thead valign="middle">
+
+<tr bgcolor="black">
+<th width="35"><font color="white" size="4">No</font>
+<th width="200"><font color="white" size="4">Makanan/Minuman</font>
+<th width="180"><font color="white" size="4">Harga Satuan</font>
+<th width="100"><font color="white" size="4">Pesan</font>
+<th width="150"><font color="white" size="4">Harga Barang</font>
+
+</tr>
+
+<tbody>
+<tr>
+<td>1<td>Cheese Buldak<td>@<input  type="text"  name="hs1"  value="60000"><td>
+<input  type="text"  name="pesan1" value="0" onChange="hitung()"/><td><input  type="text"  name="hb1"  />
+</tr>
+
+<tr>
+<td>2<td>Cheese Tteokpokki<td>@<input  type="text"  name="hs2"  value="70000" /><td>
+<input  type="text"  name="pesan2" value="0" onChange="hitung()" /> <td><input  type="text"  name="hb2"  />
+</tr>
+
+<tr>
+<td>3<td>Choco Honey Butter Bread<td>@<input  type="text"  name="hs3" value="45000" /> <td>
+<input  type="text"  name="pesan3" value="0" onChange="hitung()"/> <td><input  type="text"  name="hb3"  />
+</tr>
+
+<tr>
+<td>4<td>Lemon Tea<td>@<input  type="text"  name="hs4" value="25000"/>
+<td><input  type="text"  name="pesan4" value="0" onChange="hitung()" /> <td><input  type="text"  name="hb4"  />
+</tr>
+
+<tr>
+<td>5<td>Yangnyeom Chicken<td>@<input  type="text"  name="hs5" value="40000"/> <td>
+<input  type="text"  name="pesan5" value="0" onChange="hitung()"/> <td><input  type="text"  name="hb5"  />
+</tr>
+
+<tr>
+<td>6<td>Sundubu Jjigae<td>@<input  type="text"  name="h6" value="35000"/> <td>
+<input  type="text"  name="pesan6" value="0" onChange="hitung()"/> <td><input  type="text"  name="hb6"  />
+</tr>
+
+<tr>
+<td>7<td>Jja Jang Myun<td>@<input  type="text"  name="hs7" value="25000"/> <td>
+<input  type="text"  name="pesan7" value="0" onChange="hitung()"/> <td><input  type="text"  name="hb7"  />
+</tr>
+
+<tr>
+<td>8<td>Tteokpokki<td>@<input  type="text"  name="hs8" value="25000"/> <td>
+<input  type="text"  name="pesan8" value="0" onChange="hitung()"/> <td><input  type="text"  name="hb8"  />
+</tr>
+
+<tr>
+<td colspan=4 align="right">Jumlah Total<td><input  type="text"  name="total" />
+</tr>
+
+<tr>
+<td colspan=4 align="right">Diskon<td><input  type="text"  name="diskon" />
+</tr>
+
+<tr  bgcolor="violet">
+<td colspan=4 align="right">Jumlah Bayar<td><input  type="text"  name="bayar"/>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+   <script>
+     function a()
+	 {
+       alert("Terima Kasih Telah Memesan");
+	 }
+	</script>
+
+  <form>
+     <input type="button" value="Kirim" onClick="a()">
+	 <INPUT TYPE=Reset Name=Reset Value=&nbsp;&nbsp;Reset>
+  </form>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery.js"></script>
+    <title>Event JQuery</title>
+</head>
+<body>
+    <button class="as">double click</button> <br><br>
+<input type="text" name="" id="keyup">
+<p class="pesan_keyup"></p>
+<input type="text" name="" id="keydown">
+<p class="pesan_keydown"></p>
+    <script>
+        $(document).ready(function () {
+            $('.as').dblclick(function(){
+                $(this).css("background","red");
+            })
+            // keyup
+            $("#keyup").keyup(function(){
+                $('.pesan_keyup').text($(this).val());
+            })
+
+            //keydown 
+            $('#keydown').keydown(function(){
+                $('.pesan_keydown').text($(this).val());
+            })
+        });
+    </script>
+</body>
+</html>
